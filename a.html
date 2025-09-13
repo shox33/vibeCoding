@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI 퓨처 아카데미 - 인공지능 교육의 시작</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Noto Sans KR', sans-serif;
+            background-color: #f0f4f8;
+            color: #333;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #1a202c;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+        .card {
+            background-color: white;
+            border-radius: 1rem;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+
+    <header class="bg-indigo-600 text-white py-6 shadow-lg">
+        <div class="container flex justify-between items-center">
+            <h1 class="text-3xl font-bold">AI 퓨처 아카데미</h1>
+            <nav>
+                <ul class="flex space-x-6">
+                    <li><a href="#intro" class="hover:text-indigo-200 transition">소개</a></li>
+                    <li><a href="#programs" class="hover:text-indigo-200 transition">프로그램</a></li>
+                    <li><a href="#contact" class="hover:text-indigo-200 transition">문의</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="py-12">
+        <section id="intro" class="container text-center mb-20">
+            <h2 class="section-title">생성형 인공지능, 미래를 열다</h2>
+            <p class="text-lg text-gray-700 max-w-3xl mx-auto">
+                우리 학원은 단순한 코딩 교육을 넘어, 인공지능을 활용하여 새로운 것을 창조하는 경험을 제공합니다.
+                아이디어만 있다면 누구나 AI를 통해 현실로 만들 수 있습니다.
+            </p>
+            <div class="mt-8">
+                <img src="https://placehold.co/800x450/e5e7eb/4b5563?text=AI+%ED%95%99%EC%8A%B5+%EC%9E%A5%EB%A9%B4" alt="AI 학습 이미지" class="rounded-2xl shadow-xl mx-auto">
+            </div>
+        </section>
+
+        <section id="programs" class="container mb-20">
+            <h2 class="section-title">주요 교육 프로그램</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- 초등학생 코스 카드 -->
+                <div class="card p-8 text-center">
+                    <div class="text-4xl mb-4 text-pink-500">
+                        <!-- 이모지 또는 SVG 아이콘 사용 가능 -->
+                        🤖
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-2">어린이 AI 창작 클래스</h3>
+                    <p class="text-gray-600 mb-4">
+                        (초등학교 1-6학년)
+                    </p>
+                    <ul class="text-left text-gray-700 space-y-2">
+                        <li>✅ 블록 코딩으로 AI 개념 이해</li>
+                        <li>✅ AI 그림, 음악, 스토리 만들기</li>
+                        <li>✅ 창의력과 논리적 사고력 향상</li>
+                    </ul>
+                </div>
+                
+                <!-- 중학생 코스 카드 -->
+                <div class="card p-8 text-center">
+                    <div class="text-4xl mb-4 text-yellow-500">
+                        💻
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-2">청소년 AI 프로그래밍</h3>
+                    <p class="text-gray-600 mb-4">
+                        (중학교 1-3학년)
+                    </p>
+                    <ul class="text-left text-gray-700 space-y-2">
+                        <li>✅ 파이썬 기반 AI 코딩 입문</li>
+                        <li>✅ 머신러닝 기본 원리 학습</li>
+                        <li>✅ AI 챗봇 및 게임 개발 프로젝트</li>
+                    </ul>
+                </div>
+                
+                <!-- 성인 코스 카드 -->
+                <div class="card p-8 text-center">
+                    <div class="text-4xl mb-4 text-teal-500">
+                        💡
+                    </div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-2">성인용 AI 활용 실무</h3>
+                    <p class="text-gray-600 mb-4">
+                        (대학생 및 일반인)
+                    </p>
+                    <ul class="text-left text-gray-700 space-y-2">
+                        <li>✅ 업무 생산성 향상을 위한 AI 도구 활용</li>
+                        <li>✅ 데이터 분석과 자동화 스크립트 제작</li>
+                        <li>✅ 실무에 바로 적용 가능한 AI 모델 구축</li>
+                    </ul>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="contact" class="container bg-white p-10 rounded-2xl shadow-xl">
+            <h2 class="section-title">문의 및 상담</h2>
+            <p class="text-center text-gray-700 mb-6">
+                우리 아이의 미래, 지금 바로 시작하세요!
+                자세한 프로그램 안내 및 상담은 아래 정보를 통해 문의해 주세요.
+            </p>
+            <div class="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-8">
+                <div class="text-center">
+                    <p class="text-2xl font-bold text-indigo-600">전화 문의</p>
+                    <p class="text-xl text-gray-800 mt-2">02-123-4567</p>
+                </div>
+                <div class="text-center">
+                    <p class="text-2xl font-bold text-indigo-600">이메일</p>
+                    <p class="text-xl text-gray-800 mt-2">contact@aifuture.ac.kr</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-800 text-white text-center py-6 mt-12">
+        <div class="container">
+            <p>&copy; 2024 AI 퓨처 아카데미. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
