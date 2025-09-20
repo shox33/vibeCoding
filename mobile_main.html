@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS헤어</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #f7f7f7;
+            color: #333;
+        }
+
+        .main-container {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .hero-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* 이미지가 컨테이너를 가득 채우도록 설정 */
+            display: block;
+        }
+
+        .overlay-text {
+            position: absolute;
+            top: 20%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: #ff8c00;
+            font-size: 1.5em;
+            font-weight: bold;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+        }
+
+        .overlay-text h1 {
+            margin: 0;
+            font-size: 1.2em;
+        }
+
+        .overlay-text h2 {
+            margin: 0;
+            font-size: 2em;
+        }
+
+        .reservation-button {
+            position: absolute;
+            bottom: 50px;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 15px 50px;
+            background-color: #fff;
+            color: #000;
+            text-decoration: none;
+            font-size: 1.2em;
+            font-weight: bold;
+            border-radius: 30px;
+            display: inline-block;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+<div class="main-container">
+    <img src="mobile_main.png" alt="프리미엄 헤어샵 JS헤어 내부" class="hero-image">
+    
+    <div class="overlay-text">
+        <h1>프리미엄 헤어샵의 대표</h1>
+        <h2>JS헤어</h2>
+    </div>
+
+    <a href="tel:010-1234-5678" class="reservation-button">예약 선택</a>
+</div>
+
+</body>
+</html>
