@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>프리미엄 메쉬 운동복 세트 - 여름 신상품</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- 헤더 -->
+    <header class="header">
+        <div class="container">
+            <button class="header-btn" onclick="history.back()">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="m15 18-6-6 6-6"></path>
+                </svg>
+                돌아가기
+            </button>
+            
+            <h1 class="header-title">상품 상세</h1>
+            
+            <button class="header-btn">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"></path>
+                    <path d="m16 6-4-2-4 2"></path>
+                    <path d="M8 6v16"></path>
+                    <path d="M16 6v16"></path>
+                </svg>
+            </button>
+        </div>
+    </header>
+
+    <!-- 메인 컨텐츠 -->
+    <main class="main">
+        <div class="container">
+            <div class="product-grid">
+                <!-- 상품 이미지 갤러리 -->
+                <div class="gallery-section">
+                    <div class="main-image-container">
+                        <img id="mainImage" src="https://images.unsplash.com/photo-1512399370925-f7b84cf7a66a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzdW1tZXIlMjBhdGhsZXRpYyUyMHdlYXIlMjBtb2RlbHxlbnwxfHx8fDE3NTg5Nzk2NTN8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral" alt="여름 운동복 메인 이미지" class="main-image">
+                    </div>
+                    
+                    <div class="thumbnail-container">
+                        <button class="thumbnail active" onclick="selectImage(0)">
+                            <img src="https://images.unsplash.com/photo-1512399370925-f7b84cf7a66a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzdW1tZXIlMjBhdGhsZXRpYyUyMHdlYXIlMjBtb2RlbHxlbnwxfHx8fDE3NTg5Nzk2NTN8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral" alt="이미지 1">
+                        </button>
+                        <button class="thumbnail" onclick="selectImage(1)">
+                            <img src="https://images.unsplash.com/photo-1755224928593-352eeada6db6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhdGhsZXRpYyUyMHNob3J0cyUyMG1lc2glMjBmYWJyaWN8ZW58MXx8fHwxNzU4OTc5NjU1fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral" alt="이미지 2">
+                        </button>
+                        <button class="thumbnail" onclick="selectImage(2)">
+                            <img src="https://images.unsplash.com/photo-1748354815017-94c4be51dea9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzcG9ydHMlMjBjbG90aGluZyUyMGRldGFpbHxlbnwxfHx8fDE3NTg5Nzk2NTh8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral" alt="이미지 3">
+                        </button>
+                    </div>
+                </div>
+
+                <!-- 상품 정보 -->
+                <div class="product-info">
+                    <div class="badge new-badge">여름 신상품</div>
+                    <h1 class="product-title">프리미엄 메쉬 운동복 세트</h1>
+                    
+                    <div class="rating-section">
+                        <div class="stars">
+                            <span class="star filled">★</span>
+                            <span class="star filled">★</span>
+                            <span class="star filled">★</span>
+                            <span class="star filled">★</span>
+                            <span class="star filled">★</span>
+                        </div>
+                        <span class="rating-text">(4.8)</span>
+                        <span class="divider">|</span>
+                        <span class="review-count">127개 리뷰</span>
+                    </div>
+
+                    <div class="price-section">
+                        <div class="original-price-row">
+                            <span class="original-price">89,000원</span>
+                            <span class="discount-badge">30% OFF</span>
+                        </div>
+                        <div class="current-price-row">
+                            <span class="current-price">62,300원</span>
+                            <span class="tax-info">(부가세 포함)</span>
+                        </div>
+                    </div>
+
+                    <!-- 사이즈 선택 -->
+                    <div class="option-section">
+                        <label class="option-label">사이즈</label>
+                        <div class="size-options">
+                            <button class="size-btn" data-size="S" onclick="selectSize('S')">S</button>
+                            <button class="size-btn" data-size="M" onclick="selectSize('M')">M</button>
+                            <button class="size-btn" data-size="L" onclick="selectSize('L')">L</button>
+                            <button class="size-btn" data-size="XL" onclick="selectSize('XL')">XL</button>
+                            <button class="size-btn" data-size="XXL" onclick="selectSize('XXL')">XXL</button>
+                        </div>
+                    </div>
+
+                    <!-- 색상 선택 -->
+                    <div class="option-section">
+                        <label class="option-label">색상</label>
+                        <div class="color-options">
+                            <button class="color-btn" data-color="네이비" style="background-color: #1e3a8a" onclick="selectColor('네이비')"></button>
+                            <button class="color-btn" data-color="차콜" style="background-color: #374151" onclick="selectColor('차콜')"></button>
+                            <button class="color-btn" data-color="화이트" style="background-color: #ffffff; border: 2px solid #e5e7eb" onclick="selectColor('화이트')"></button>
+                            <button class="color-btn" data-color="블랙" style="background-color: #000000" onclick="selectColor('블랙')"></button>
+                        </div>
+                        <div id="selectedColor" class="selected-color"></div>
+                    </div>
+
+                    <!-- 수량 선택 -->
+                    <div class="option-section">
+                        <label class="option-label">수량</label>
+                        <div class="quantity-controls">
+                            <button class="quantity-btn" onclick="changeQuantity(-1)">-</button>
+                            <span id="quantity" class="quantity-display">1</span>
+                            <button class="quantity-btn" onclick="changeQuantity(1)">+</button>
+                        </div>
+                    </div>
+
+                    <!-- 구매 버튼들 -->
+                    <div class="button-section">
+                        <button class="btn btn-primary">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="9" cy="21" r="1"></circle>
+                                <circle cx="20" cy="21" r="1"></circle>
+                                <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                            </svg>
+                            장바구니 담기
+                        </button>
+                        <button class="btn btn-secondary">바로 구매하기</button>
+                        <button class="btn btn-ghost" id="wishlistBtn" onclick="toggleWishlist()">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                            </svg>
+                            찜하기
+                        </button>
+                    </div>
+
+                    <!-- 배송 정보 -->
+                    <div class="shipping-info">
+                        <h3>배송 정보</h3>
+                        <ul>
+                            <li>• 무료배송 (30,000원 이상 구매시)</li>
+                            <li>• 평일 오후 2시 이전 주문시 당일발송</li>
+                            <li>• 배송기간: 1-2일 (제주/도서산간 제외)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 상품 상세 탭 -->
+            <div class="tabs-section">
+                <div class="tab-buttons">
+                    <button class="tab-btn active" onclick="openTab('details')">상품상세</button>
+                    <button class="tab-btn" onclick="openTab('size')">사이즈가이드</button>
+                    <button class="tab-btn" onclick="openTab('reviews')">리뷰 (127)</button>
+                    <button class="tab-btn" onclick="openTab('qna')">Q&A</button>
+                </div>
+
+                <!-- 상품상세 탭 -->
+                <div id="details" class="tab-content active">
+                    <h3>상품 상세 정보</h3>
+                    <div class="feature-box">
+                        <h4>프리미엄 메쉬 운동복의 특징</h4>
+                        <ul>
+                            <li>• <strong>고급 메쉬 소재:</strong> 뛰어난 통기성과 빠른 건조</li>
+                            <li>• <strong>4-way 스트레치:</strong> 자유로운 움직임 보장</li>
+                            <li>• <strong>항균 처리:</strong> 냄새 방지 및 위생적</li>
+                            <li>• <strong>UV 차단:</strong> 자외선으로부터 피부 보호</li>
+                            <li>• <strong>반사 디테일:</strong> 야간 운동시 안전성 확보</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="info-grid">
+                        <div class="info-section">
+                            <h4>소재 정보</h4>
+                            <ul>
+                                <li>겉감: 폴리에스터 85%, 스판덱스 15%</li>
+                                <li>안감: 메쉬 100% 폴리에스터</li>
+                                <li>원산지: 한국</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="info-section">
+                            <h4>관리 방법</h4>
+                            <ul>
+                                <li>찬물 단독 세탁</li>
+                                <li>중성세제 사용 권장</li>
+                                <li>표백제 사용 금지</li>
+                                <li>그늘에서 자연 건조</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 사이즈가이드 탭 -->
+                <div id="size" class="tab-content">
+                    <h3>사이즈 가이드</h3>
+                    <div class="table-container">
+                        <table class="size-table">
+                            <thead>
+                                <tr>
+                                    <th>사이즈</th>
+                                    <th>가슴둘레 (cm)</th>
+                                    <th>허리둘레 (cm)</th>
+                                    <th>총장 (cm)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>S</td>
+                                    <td>90-95</td>
+                                    <td>70-75</td>
+                                    <td>67</td>
+                                </tr>
+                                <tr>
+                                    <td>M</td>
+                                    <td>95-100</td>
+                                    <td>75-80</td>
+                                    <td>69</td>
+                                </tr>
+                                <tr>
+                                    <td>L</td>
+                                    <td>100-105</td>
+                                    <td>80-85</td>
+                                    <td>71</td>
+                                </tr>
+                                <tr>
+                                    <td>XL</td>
+                                    <td>105-110</td>
+                                    <td>85-90</td>
+                                    <td>73</td>
+                                </tr>
+                                <tr>
+                                    <td>XXL</td>
+                                    <td>110-115</td>
+                                    <td>90-95</td>
+                                    <td>75</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                    <div class="size-tip">
+                        <h4>사이즈 선택 팁</h4>
+                        <ul>
+                            <li>• 운동복은 약간 여유있게 착용하시는 것을 권장합니다</li>
+                            <li>• 측정 방법: 가슴둘레는 겨드랑이 아래, 허리둘레는 가장 가는 부분을 측정</li>
+                            <li>• 개인차가 있을 수 있으니 참고용으로 활용해주세요</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 리뷰 탭 -->
+                <div id="reviews" class="tab-content">
+                    <div class="reviews-header">
+                        <h3>구매후기</h3>
+                        <div class="rating-summary">
+                            <div class="rating-score">
+                                <span class="star filled">★</span>
+                                <span>4.8 / 5.0</span>
+                            </div>
+                            <div class="badge">127개 리뷰</div>
+                        </div>
+                    </div>
+
+                    <div class="reviews-list">
+                        <div class="review-item">
+                            <div class="review-header">
+                                <div class="reviewer-info">
+                                    <span class="reviewer-name">김**</span>
+                                    <div class="review-rating">
+                                        <span class="star filled">★</span>
+                                        <span class="star filled">★</span>
+                                        <span class="star filled">★</span>
+                                        <span class="star filled">★</span>
+                                        <span class="star filled">★</span>
+                                    </div>
+                                </div>
+                                <span class="review-date">2024-09-20</span>
+                            </div>
+                            <p class="review-content">정말 시원하고 편해요. 여름에 운동할 때 최고입니다. 통기성이 정말 좋고 땀도 잘 안 차네요.</p>
+                            <button class="helpful-btn">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M7 10v12"></path>
+                                    <path d="M15 5.88 14 10h5.83a2 2 0 0 1 1.92 2.56l-2.33 8A2 2 0 0 1 17.5 22H4a2 2 0 0 1-2-2v-8a2 2 0 0 1 2-2h2.76a2 2 0 0 0 1.79-1.11L12 2h3.73a2 2 0 0 1 1.92 2.56z"></path>
+                                </svg>
+                                도움돼요 12
+                            </button>
+                        </div>
+
+                        <div class="review-item">
+                            <div class="review-header">
+                                <div class="reviewer-info">
+                                    <span class="reviewer-name">이**</span>
+                                    <div class="review-rating">
+                                        <span class="star filled">★</span>
+                                        <span class="star filled">★</span>
+                                        <span class="star filled">★</span>
+                                        <span class="star filled">★</span>
+                                        <span class="star">★</span>
+                                    </div>
+                                </div>
+                                <span class="review-date">2024-09-18</span>
+                            </div>
+                            <p class="review-content">사이즈가 딱 맞고 품질도 좋습니다. 색상도 사진과 동일해요. 다만 가격이 조금 아쉬워요.</p>
+                            <button class="helpful-btn">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M7 10v12"></path>
+                                    <path d="M15 5.88 14 10h5.83a2 2 0 0 1 1.92 2.56l-2.33 8A2 2 0 0 1 17.5 22H4a2 2 0 0 1-2-2v-8a2 2 0 0 1 2-2h2.76a2 2 0 0 0 1.79-1.11L12 2h3.73a2 2 0 0 1 1.92 2.56z"></path>
+                                </svg>
+                                도움돼요 8
+                            </button>
+                        </div>
+
+                        <div class="review-item">
+                            <div class="review-header">
+                                <div class="reviewer-info">
+                                    <span class="reviewer-name">박**</span>
+                                    <div class="review-rating">
+                                        <span class="star filled">★</span>
+                                        <span class="star filled">★</span>
+                                        <span class="star filled">★</span>
+                                        <span class="star filled">★</span>
+                                        <span class="star filled">★</span>
+                                    </div>
+                                </div>
+                                <span class="review-date">2024-09-15</span>
+                            </div>
+                            <p class="review-content">몇 번 세탁해도 형태 변화가 없어서 만족합니다. 운동할 때 활동성이 좋아요.</p>
+                            <button class="helpful-btn">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M7 10v12"></path>
+                                    <path d="M15 5.88 14 10h5.83a2 2 0 0 1 1.92 2.56l-2.33 8A2 2 0 0 1 17.5 22H4a2 2 0 0 1-2-2v-8a2 2 0 0 1 2-2h2.76a2 2 0 0 0 1.79-1.11L12 2h3.73a2 2 0 0 1 1.92 2.56z"></path>
+                                </svg>
+                                도움돼요 15
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Q&A 탭 -->
+                <div id="qna" class="tab-content">
+                    <h3>상품 Q&A</h3>
+                    <div class="qna-list">
+                        <div class="qna-item">
+                            <div class="question">
+                                <span class="qna-badge">Q</span>
+                                <span>사이즈 교환이 가능한가요?</span>
+                            </div>
+                            <div class="answer">
+                                <span class="qna-badge answer-badge">A</span>
+                                <p>네, 상품 수령 후 7일 이내에 미착용 상태로 교환 가능합니다. 다만 고객 변심에 의한 교환시 배송비는 고객 부담입니다.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="qna-item">
+                            <div class="question">
+                                <span class="qna-badge">Q</span>
+                                <span>세탁 후 줄어들지 않나요?</span>
+                            </div>
+                            <div class="answer">
+                                <span class="qna-badge answer-badge">A</span>
+                                <p>고품질 원단을 사용하여 찬물 세탁시 줄어듦이 거의 없습니다. 관리 방법을 준수해 주시면 오랫동안 착용 가능합니다.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 추천 상품 -->
+            <div class="recommended-section">
+                <h2>함께 보면 좋은 상품</h2>
+                
+                <div class="product-grid-4">
+                    <div class="product-card">
+                        <div class="product-image-container">
+                            <img src="https://images.unsplash.com/photo-1758289863455-f5b1c8c76857?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhdGhsZXRpYyUyMHRhbmslMjB0b3B8ZW58MXx8fHwxNzU4OTc5NzMwfDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral" alt="시원한 메쉬 탱크톱">
+                            <div class="discount-badge">24% OFF</div>
+                        </div>
+                        <div class="product-content">
+                            <h3>시원한 메쉬 탱크톱</h3>
+                            <div class="product-rating">
+                                <span class="star filled">★</span>
+                                <span class="rating-text">4.7 (89)</span>
+                            </div>
+                            <div class="price-info">
+                                <div class="original-price">59,000원</div>
+                                <div class="current-price">45,000원</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image-container">
+                            <img src="https://images.unsplash.com/photo-1598794960371-8ec90cc734a7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzcG9ydHMlMjBzaG9ydHMlMjBydW5uaW5nfGVufDF8fHx8MTc1ODk3OTczM3ww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral" alt="프리미엄 러닝 쇼츠">
+                            <div class="new-badge">NEW</div>
+                            <div class="discount-badge">30% OFF</div>
+                        </div>
+                        <div class="product-content">
+                            <h3>프리미엄 러닝 쇼츠</h3>
+                            <div class="product-rating">
+                                <span class="star filled">★</span>
+                                <span class="rating-text">4.9 (134)</span>
+                            </div>
+                            <div class="price-info">
+                                <div class="original-price">55,000원</div>
+                                <div class="current-price">38,500원</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image-container">
+                            <img src="https://images.unsplash.com/photo-1748354815017-94c4be51dea9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzcG9ydHMlMjBjbG90aGluZyUyMGRldGFpbHxlbnwxfHx8fDE3NTg5Nzk2NTh8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral" alt="쿨링 반팔 티셔츠">
+                            <div class="discount-badge">24% OFF</div>
+                        </div>
+                        <div class="product-content">
+                            <h3>쿨링 반팔 티셔츠</h3>
+                            <div class="product-rating">
+                                <span class="star filled">★</span>
+                                <span class="rating-text">4.6 (76)</span>
+                            </div>
+                            <div class="price-info">
+                                <div class="original-price">68,000원</div>
+                                <div class="current-price">52,000원</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-image-container">
+                            <img src="https://images.unsplash.com/photo-1512399370925-f7b84cf7a66a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzdW1tZXIlMjBhdGhsZXRpYyUyMHdlYXIlMjBtb2RlbHxlbnwxfHx8fDE3NTg5Nzk2NTN8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral" alt="여름 운동복 세트">
+                            <div class="new-badge">NEW</div>
+                            <div class="discount-badge">31% OFF</div>
+                        </div>
+                        <div class="product-content">
+                            <h3>여름 운동복 세트</h3>
+                            <div class="product-rating">
+                                <span class="star filled">★</span>
+                                <span class="rating-text">4.8 (203)</span>
+                            </div>
+                            <div class="price-info">
+                                <div class="original-price">129,000원</div>
+                                <div class="current-price">89,000원</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- 모바일 하단 고정 버튼 -->
+    <div class="mobile-fixed-bottom">
+        <button class="mobile-btn mobile-btn-outline">장바구니</button>
+        <button class="mobile-btn mobile-btn-primary">바로구매</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
