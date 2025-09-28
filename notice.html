@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JH시스템 신입사원 채용공고 (사이즈 조정 적용)</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
+    <style>
+        /* --- 색상 변수 정의 --- */
+        :root {
+            --color-light-blue: #63C5F1; /* 배경 메인 파란색 */
+            --color-gradient-top: #A0D8F7; /* 배경 최상단 밝은 파란색 */
+            --color-dark-blue: #0077B6; /* 배경 하단 인물 영역 진한 파란색 및 버튼 색상 */
+            --color-text-dark: #194676; /* 제목, 날짜에 사용된 진한 파란색 텍스트 */
+            --color-white: #FFFFFF;
+            --color-highlight-red: #CC3333; /* 마감 시간 빨간색 */
+        }
+
+        /* --- 레이아웃 설정: 뷰포트에 맞게 콘텐츠 비율 유지 --- */
+        body {
+            /* 브라우저 전체를 사용 */
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            background-color: #f0f0f0; 
+            overflow: hidden; /* 스크롤바 방지 */
+            font-family: 'Noto Sans KR', sans-serif;
+            position: relative;
+        }
+
+        .container {
+            /* 1080px x 1920px의 기준 크기 */
+            width: 1080px;
+            height: 1920px;
+            
+            /* 콘텐츠 비율을 유지하고 중앙에 배치하는 핵심 CSS */
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%); /* 중앙 정렬 */
+            
+            /* 비율 조정: 브라우저 창 크기에 맞게 축소/확대 */
+            /* 이 부분은 JavaScript를 통해 동적으로 계산해야 정확하지만,
+               데스크톱에서 확인 시 F12 개발자 도구의 '장치 툴바'를 사용하면 정확한 비율로 보입니다. */
+            /* 데스크톱 일반 창에서 테스트할 경우, 창 크기에 따라 깨져 보일 수 있습니다. */
+
+            /* 세로 그라데이션 배경: 이미지 색상 추출 및 비율 조정 */
+            background: linear-gradient(to bottom, 
+                var(--color-gradient-top) 0%, 
+                var(--color-light-blue) 25%, 
+                var(--color-light-blue) 45%, 
+                var(--color-dark-blue) 95%
+            );
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            box-sizing: border-box;
+        }
+
+        /* --- 상단 흰색 곡선/구분선 --- */
+        .top-line {
+            position: absolute;
+            top: 150px; 
+            width: 900px; 
+            height: 2px;
+            background: var(--color-white);
+            border-radius: 1px;
+            box-shadow: 0 0 5px rgba(255, 255, 255, 0.5); 
+            z-index: 10;
+        }
+
+        /* --- 콘텐츠 영역 --- */
+        .content-area {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 250px; 
+            z-index: 20; /* 텍스트가 이미지 위에 오도록 */
+        }
+
+        /* --- 텍스트 스타일 --- */
+        .header-text {
+            line-height: 1.2;
+            margin-bottom: 70px;
+        }
+
+        .header-text h1 {
+            font-size: 85px; 
+            font-weight: 700;
+            color: var(--color-text-dark); 
+            margin: 0;
+        }
+
+        .header-text p {
+            font-size: 85px;
+            font-weight: 900;
+            color: var(--color-text-dark); 
+            margin: 10px 0 0 0;
+        }
+        
+        /* 모집 정보 */
+        .recruit-info {
+            line-height: 1.5;
+            color: var(--color-text-dark);
+        }
+
+        .recruit-info .label {
+            font-size: 50px; 
+            font-weight: 500;
+            margin-bottom: 20px;
+        }
+
+        .recruit-info .date-range {
+            font-size: 40px; 
+            font-weight: 900;
+            margin: 10px 0;
+        }
+
+        .recruit-info .deadline {
+            font-size: 40px;
+            font-weight: 700;
+            color: var(--color-highlight-red); 
+            margin-top: 30px;
+        }
+
+        /* --- 버튼 스타일 --- */
+        .apply-button {
+            display: inline-block;
+            background-color: var(--color-dark-blue);
+            color: var(--color-white);
+            padding: 25px 40px; 
+            margin-top: 20px; 
+            border-radius: 50px;
+            border: 4px solid var(--color-white); 
+            text-decoration: none;
+            font-size: 35px;
+            font-weight: 700;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s;
+        }
+
+        .apply-button:hover {
+            background-color: #005A8D;
+        }
+
+        /* --- 인물 이미지 영역 --- */
+        .person-image {
+            width: 100%;
+            height: 1100px; 
+            position: absolute; 
+            bottom: 0;
+            left: 0;
+            
+            /* 인물 이미지 대체 처리 */
+            background-color: var(--color-dark-blue); 
+            /* 실제 이미지 URL로 변경해야 합니다. */
+            background-image: url('hm.png'); 
+            background-size: contain; 
+            background-position: center bottom; 
+            background-repeat: no-repeat;
+            
+            z-index: 1; 
+        }
+    </style>
+    <script>
+        // JavaScript를 사용하여 브라우저 크기에 따라 .container의 비율을 동적으로 조정
+        document.addEventListener('DOMContentLoaded', () => {
+            const container = document.querySelector('.container');
+            const targetWidth = 1080;
+            const targetHeight = 1920;
+
+            function scaleContainer() {
+                const windowWidth = window.innerWidth;
+                const windowHeight = window.innerHeight;
+                
+                // 가로/세로 비율 중 더 작은 비율을 선택하여 컨테이너가 잘리지 않도록 함
+                const scaleX = windowWidth / targetWidth;
+                const scaleY = windowHeight / targetHeight;
+                const scale = Math.min(scaleX, scaleY);
+
+                // 컨테이너에 스케일 적용
+                container.style.transform = `translate(-50%, -50%) scale(${scale})`;
+            }
+
+            // 초기 로드 및 창 크기 변경 시 실행
+            scaleContainer();
+            window.addEventListener('resize', scaleContainer);
+        });
+    </script>
+</head>
+<body>
+
+<div class="container">
+    <div class="top-line"></div>
+    
+    <div class="content-area">
+        <div class="header-text">
+            <h1>2026년 상반기</h1>
+            <p>JH시스템 신입사원 <br>채용공고</p>
+        </div>
+
+        <div class="recruit-info">
+            <p class="date-range">원서접수 <br>2026. 01. 14(수) ~ 01. 20(월)</p>
+            <!--<p class="deadline">* 18:00 마감</p>-->
+        </div>
+
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLScIj5aCTnIcT_Lgg2pWbJnsAgWtS124COEqVaecVGJocmZdZw/viewform?usp=dialog" class="apply-button">지원서 제출</a>
+    </div>
+
+    <div class="person-image">
+        </div>
+</div>
+
+</body>
+</html>
